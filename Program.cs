@@ -1,37 +1,32 @@
 ﻿using ExemploExplorando.Models;
 using System.Globalization;
 
-DateTime data = DateTime.Now;
-Console.WriteLine("Utilizando o DateTime: ");
-Console.WriteLine(data);
-Console.WriteLine(data.ToString("dd/MM/yyyy HH:mm\n"));
-
-Console.WriteLine("Utilizando o DateTime.Parse: ");
-DateTime data2 = DateTime.Parse("19/04/2022 18:27");
-Console.WriteLine(data2+"\n");
-
-Console.WriteLine("Utilizando o DateTime.TryParseExact: ");
-string dataString = "2022-01-27 17:00";
-// Entendendo o tryparse e TryParseExact
-DateTime.TryParseExact(dataString,
-                       "yyyy-MM-dd HH:mm",
-                       CultureInfo.InvariantCulture,
-                       DateTimeStyles.None,
-                       out DateTime data4);
-Console.WriteLine(data4+"\n");
-
-// If/Else para entender o bool do DateTime.TryParseExact
-
-bool sucesso = DateTime.TryParseExact(dataString,
-                       "yyyy-MM-dd HH:mm",
-                       CultureInfo.InvariantCulture,
-                       DateTimeStyles.None,
-                       out DateTime data5);
-if (sucesso)
+try
 {
-    Console.WriteLine($"Data convertida com sucesso!! Data: {data5}");
+
+    string[] linhas = File.ReadAllLines("Arquivos/pasta1/arquivoLeitura.txt");
+
+    foreach (string linha in linhas)
+    {
+        Console.WriteLine(linha);
+    }
 }
-else
+catch (FileNotFoundException ex)
 {
-    Console.WriteLine($"{dataString} não é uma data válida, verifique!!");
+    Console.WriteLine($"Ocorreu um erro na leitura do arquivo. Arquivo não encontrado. {ex.Message}");
 }
+catch (DirectoryNotFoundException ex)
+{
+    Console.WriteLine($"Ocorreu um erro na leitura do arquivo. O caminho da pasta não foi encontrado."
+    + ex.Message);
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"Ocorreu uma excessão genérica. {ex.Message}");
+}
+finally
+{
+    Console.WriteLine("Chegou até aqui!");
+}
+
+
