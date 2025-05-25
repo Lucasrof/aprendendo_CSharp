@@ -1,22 +1,37 @@
 ﻿using ExemploExplorando.Models;
 using System.Globalization;
 
-CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("en-US");
+DateTime data = DateTime.Now;
+Console.WriteLine("Utilizando o DateTime: ");
+Console.WriteLine(data);
+Console.WriteLine(data.ToString("dd/MM/yyyy HH:mm\n"));
 
-string numero1 = "10";
-string numero2 = "20";
+Console.WriteLine("Utilizando o DateTime.Parse: ");
+DateTime data2 = DateTime.Parse("19/04/2022 18:27");
+Console.WriteLine(data2+"\n");
 
-string resultado = numero1 + numero2;
+Console.WriteLine("Utilizando o DateTime.TryParseExact: ");
+string dataString = "2022-01-27 17:00";
+// Entendendo o tryparse e TryParseExact
+DateTime.TryParseExact(dataString,
+                       "yyyy-MM-dd HH:mm",
+                       CultureInfo.InvariantCulture,
+                       DateTimeStyles.None,
+                       out DateTime data4);
+Console.WriteLine(data4+"\n");
 
-Console.WriteLine(resultado);
+// If/Else para entender o bool do DateTime.TryParseExact
 
-decimal valorMonetario = 82.40M;
-Console.WriteLine($"{valorMonetario:C}");
-Console.WriteLine(valorMonetario.ToString("C", CultureInfo.CreateSpecificCulture("pt-BR")));
-
-
-double porcentagem = .3421;
-Console.WriteLine(porcentagem.ToString("P"));
-
-int numero = 123456;
-Console.WriteLine(numero.ToString("##-##-##"));
+bool sucesso = DateTime.TryParseExact(dataString,
+                       "yyyy-MM-dd HH:mm",
+                       CultureInfo.InvariantCulture,
+                       DateTimeStyles.None,
+                       out DateTime data5);
+if (sucesso)
+{
+    Console.WriteLine($"Data convertida com sucesso!! Data: {data5}");
+}
+else
+{
+    Console.WriteLine($"{dataString} não é uma data válida, verifique!!");
+}
