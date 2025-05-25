@@ -1,0 +1,4 @@
+Linha 1 - Nome de Usuário : Thalisson R
+Linha 2 - Data Nascimento : 15/03/1945
+Linha 3 - Região de Nascimento : Pirituba - RJ
+Linha 4 - Tipo de Plano : Infinity Gold
