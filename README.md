@@ -43,6 +43,7 @@ Se você quiser sugerir melhorias ou corrigir algo, sinta-se à vontade para abr
 
 Se tiver dúvidas ou quiser compartilhar ideias, entre em contato!  
 💼 Linkedin: www.linkedin.com/in/lucasrosaf 
+
 📧 Email: lucasrof7@gmail.com
 
 
