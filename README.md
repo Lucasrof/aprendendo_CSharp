@@ -42,7 +42,7 @@ Se você quiser sugerir melhorias ou corrigir algo, sinta-se à vontade para abr
 ### 🌟 Conecte-se comigo
 
 Se tiver dúvidas ou quiser compartilhar ideias, entre em contato!  
-💼 www.linkedin.com/in/lucasrosaf 
+💼 Linkedin: www.linkedin.com/in/lucasrosaf 
 📧 Email: lucasrof7@gmail.com
 
 
