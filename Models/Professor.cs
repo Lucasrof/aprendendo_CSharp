@@ -8,6 +8,10 @@ namespace ExemploExplorando.Models
 {
     public class Professor : Pessoa
     {
+        public Professor(string nome) : base(nome) // entendendo a herança e como definir um valor obrigatorio ao construir o método
+        {
+            
+        }
         public decimal Salario { get; set; }
 
         public override void Apresentar()
