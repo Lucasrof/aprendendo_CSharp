@@ -1,20 +1,16 @@
-﻿using ExemploExplorando.Models;
+﻿using aprendendo_CSharp.Models;
+using ExemploExplorando.Models;
 using System.Globalization;
+using System.Security.Cryptography;
 using System.Text;
 
 Thread.CurrentThread.CurrentCulture = Thread.CurrentThread.CurrentCulture = new CultureInfo("pt-BR");
 Console.OutputEncoding = Encoding.UTF8;
 
-Aluno a1 = new Aluno();
-a1.Nome = "Lucas";
-a1.Idade = 27;
-a1.Email = "teste@gmail.com";
-a1.Nota = 10;
+Corrente c = new Corrente();
+c.Creditar(500);
+c.ExibirSaldo();
+
+Pessoa p1 = new Pessoa("Lucas");
+Aluno a1 = new Aluno("Lucas R");
 a1.Apresentar();
-
-Professor p1 = new Professor();
-p1.Nome = "Luiz Antonio";
-p1.Idade = 55;
-p1.Salario = 10000;
-p1.Apresentar();
-
