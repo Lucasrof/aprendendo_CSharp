@@ -8,10 +8,7 @@ namespace ExemploExplorando.Models
 {
     public class Aluno : Pessoa
     {
-        public Aluno(string nome) : base(nome) // entendendo a herança e como definir um valor obrigatorio ao construir o método
-        {
-            
-        }
+
         public double Nota { get; set; }
           public override void Apresentar()
         {
