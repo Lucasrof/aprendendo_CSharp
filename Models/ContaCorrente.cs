@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace aprendendo_CSharp.Models
+namespace ExemploExplorando.Models
 {
     public class ContaCorrente
     {
