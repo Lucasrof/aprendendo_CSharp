@@ -6,15 +6,12 @@ using System.Threading.Tasks;
 
 namespace ExemploExplorando.Models
 {
-    public class Professor : Pessoa
+    public sealed class Professor : Pessoa // Se a classe for selada ('sealed') esta não poderá ter nenhuma classe filha
     {
-        public Professor(string nome) : base(nome) // entendendo a herança e como definir um valor obrigatorio ao construir o método
-        {
-            
-        }
+       
         public decimal Salario { get; set; }
 
-        public override void Apresentar()
+        public sealed override void Apresentar() // Se for selado  ('sealed') a classe filha não podera sobrescrever o método 
         {
             Console.WriteLine($"Olá meu nome é {Nome} tenho {Idade} anos. Sou professor e meu salário é: {Salario}");
         }
