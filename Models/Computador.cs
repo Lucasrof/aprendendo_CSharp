@@ -5,7 +5,8 @@ using System.Threading.Tasks;
 
 namespace ExemploExplorando.Models
 {
-    public class Diretor
+    public class Computador
     {
+        
     }
 }
